@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 初始化内外边距 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 定义最大盒子 mic */
+        .mic {
+            overflow: hidden;
+            /* 为了防止父边框塌陷 */
+            text-align: center;
+            /* 盒子中的子盒子居中 相对于盒子mic */
+            width: 235px;
+            height: 367px;
+            /* 盒子的大小（图片的大小 这里使用的图片大小已经经过ps调整为235*367） */
+            margin: 200px auto;
+            /* 盒子相对于body的位置 */
+            background-color: white;
+            /* 盒子的背景颜色 盒子的边框 */
+            border: 1px solid #9b9b9b;
+            transition: width 1s, height 1s;
+            /* 盒子的动态 过渡 */
+            position: relative;
+            /* 盒子的层高 这里设置层高是为了防止动画干扰 如果不设置则动画会受到同层的元素 字符的干扰*/
+            z-index: 3;
+        }
+
+        /* 定义图片 */
+        .tupian {
+            width: 235px;
+            height: 367px;
+            transition: width 1s, height 1s;
+            /* 图片动画 这里和盒子mic用同样的动画 */
+            position: relative;
+            /* 设置层高 防干扰 同mic层高原因 */
+            z-index: 3;
+
+        }
+
+        .biaoti {
+            color: #9b9b9b;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: -120px;
+            text-align: center;
+        }
+
+        .yen,
+        .num {
+            color: #191f1d;
+            font-weight: 700;
+        }
+
+        .yen {
+            font-size: 16px;
+        }
+
+        .num {
+            font-size: 18px;
+        }
+
+        .jiaqian {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .baozhang {
+            color: #191f1d;
+            font-size: 3px;
+            font-weight: 700;
+            width: 191px;
+            margin: 20px auto;
+
+        }
+
+        .bz2 {
+            margin: 0 7px;
+        }
+
+        .mic:hover {
+            width: 260px;
+            height: 400px;
+        }
+
+        .tupian:hover {
+            width: 260px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mic">
+        <img src="the n f 2.png" alt="" class="tupian">
+        <h3 class="biaoti">
+            THE NORTH FACE 1990 MOUT...
+        </h3>
+        <div class="jiaqian">
+            <span class="yen">&yen</span>
+            <span class="num">3379</span>
+        </div>
+        <div class="baozhang">
+            <span class="bz1">先鉴别后发货</span><span class="bz2">逐件查验</span><span class="bz3">正品保障</span>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
